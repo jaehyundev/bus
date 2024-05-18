@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <link rel="icon" href="./web_img/favicon.png" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="./web_img/appleicon.png">
+  <link rel="icon" type="image/png" href="./web_img/favicon.png">
+  <title>동캠퍼스</title>
+  <style>
+
+    html{
+      -webkit-touch-callout:none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    button:focus{
+      outline: none;
+    }
+    
+
+    @font-face {
+        font-family: 'LINESeedKR-Bd';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .sriracha-regular {
+      font-family: "Sriracha", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+
+    body, button {
+  font-family: 'LINESeedKR-Bd';
+}
+
+header {
+    height: 50px;
+  font-family: 'LINESeedKR-Bd';
+  border: none;
+  text-align: center;
+  width: 100%; 
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  max-width: 600px;
+}
+
+.other-elements {
+  margin-top: 5px;
+  position: absolute;
+  right: 0;
+}
+
+    body {
+      background: linear-gradient(to bottom, #0a0613, #120f39, #12062a);
+      margin: 0;
+      padding: 0;
+    }
+
+    .no-drag {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .container {
+      width: 500px; 
+      margin: 0 auto; 
+      padding: 0px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; 
+    }
+
+    .container > div {
+      padding: 0px;
+      border: 0px solid #ddd;
+    }
+
+    h2 {
+      color: #e9e9e9;
+    }
+
+    .sectionarea1, .sectionarea2 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+    .sectionarea1, .sectionarea2 {
+      width: 100%; 
+    }
+
+    .sectionarea3 {
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: center; 
+    }
+
+    .sectionarea3 p {
+      margin: 3px;
+    }
+
+    .sectionarea3 > .busarea {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px; 
+    }
+
+    .sectionarea3 > .busarea > div {
+      padding: 15px; 
+    }
+
+    .sectionarea3 > div:nth-child(3n) {
+      margin-right: 0; 
+    }
+
+    .webreload{
+        color: white;
+    }
+
+    .webreload img{
+      width: 25px;
+    }
+
+    .station_name {
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    .busarea{
+      padding-left: 0px;
+      height: 90px;
+      background-color: rgba(43, 39, 102, 0.2);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); 
+      color: #e9e9e9;
+      width: 100%;
+      border-radius: 15px;
+    }
+
+
+    .content-box {
+      font-size: 17px;
+      height: 190px;
+      width: 190px;
+      border: none;
+      background-color: rgba(43, 39, 102, 0.2);
+      border-radius: 15px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); 
+      padding: 20px; 
+      color: #e9e9e9;
+    }
+
+img.rotate {
+  margin-top: 6px;
+  margin-left: 5px;
+    width: 20px;
+    transition: transform 1s ease-in-out;
+}
+
+
+
+.bus_container {
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info_section2{
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+
+
+
+
+
+
+
+
+
+  #busArrivalInfo {
+            width: 100%;
+            text-align:center;
+        }
+  #busArrivalInfo_2 {
+            width: 100%;
+            text-align:center;
+        }
+  #busArrivalInfo_3 {
+            width: 100%;
+            text-align:center;
+        }
+
+        .busInfo {
+            margin: 8px;
+            padding: 10px;
+            padding-left: 20px;
+            border-radius: 15px;
+            background-color: rgba(43, 39, 102, 0.2);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); 
+        }
+
+        .routeId {
+            font-size: 20px;
+            color: #d287fd;
+            margin-bottom: 5px;
+        }
+
+        .arrivalTime {
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        .arrivalTime_2 {
+            font-size: 13px;
+            color: #ffffff;
+        }
+
+        .routeId,
+        .arrivalTime {
+            white-space: pre;
+        }
+  </style>
+</head>
+<body class="no-drag">
+  <header>
+    <div class="header-content">
+        <h1>🐢</h1>
+    </div>
+  </header>
+
+
+    <div class="bus_container">
+      <div>
+        <h3 class="webreload">🚍성남시청</h3>
+      </div>
+      <div>
+        <img class="rotate" src="./web_img/reicon.gif" onclick="rotateImage(this)">
+      </div>
+    </div>
+    <div id="busArrivalInfo"></div>
+
+    <div class="bus_container">
+      <div>
+        <h3 class="webreload">🚍보건소</h3>
+      </div>
+      <div>
+        <img class="rotate" src="./web_img/reicon.gif" onclick="rotateImage(this)">
+      </div>
+    </div>
+    <div id="busArrivalInfo_2"></div>
+    
+    <div class="bus_container">
+      <div>
+        <h3 class="webreload">🚍그랑메종</h3>
+      </div>
+      <div>
+        <img class="rotate" src="./web_img/reicon.gif" onclick="rotateImage(this)">
+      </div>
+    </div>
+    <div id="busArrivalInfo_3"></div>
+
+  </div>
+
+  
+
+  <script>
+var _0x23d23b=_0x5edd;(function(_0x407719,_0x5c5bac){var _0x4ebc43=_0x5edd,_0x44c074=_0x407719();while(!![]){try{var _0x12ad52=parseInt(_0x4ebc43(0x14b))/0x1+-parseInt(_0x4ebc43(0x124))/0x2+parseInt(_0x4ebc43(0x12e))/0x3*(parseInt(_0x4ebc43(0x13a))/0x4)+parseInt(_0x4ebc43(0x12b))/0x5*(parseInt(_0x4ebc43(0x14e))/0x6)+-parseInt(_0x4ebc43(0x11e))/0x7*(-parseInt(_0x4ebc43(0x148))/0x8)+-parseInt(_0x4ebc43(0x126))/0x9+-parseInt(_0x4ebc43(0x118))/0xa*(parseInt(_0x4ebc43(0x145))/0xb);if(_0x12ad52===_0x5c5bac)break;else _0x44c074['push'](_0x44c074['shift']());}catch(_0x591823){_0x44c074['push'](_0x44c074['shift']());}}}(_0x11c9,0x384cc));let currentRotation=0x0;function rotateImage(_0x117d84){var _0x2f0d58=_0x5edd;currentRotation+=0x168,_0x117d84[_0x2f0d58(0x150)][_0x2f0d58(0x123)]='rotate('+currentRotation+_0x2f0d58(0x11a),setTimeout(function(){var _0x2c981e=_0x2f0d58;location[_0x2c981e(0x14c)]();},0x2bc);}window[_0x23d23b(0x12f)]=function(){var _0x3b10d9=_0x23d23b;document[_0x3b10d9(0x156)][_0x3b10d9(0x150)][_0x3b10d9(0x136)]=0x0,setTimeout(function(){var _0x4d2ab5=_0x3b10d9;document[_0x4d2ab5(0x156)][_0x4d2ab5(0x150)][_0x4d2ab5(0x136)]=0x1;},0x64);};function getBusArrivalInfo(){var _0xaa1ae9=_0x23d23b,_0x3c4d25=new XMLHttpRequest(),_0x4252e3=_0xaa1ae9(0x134),_0xeebe0e='nwaefISD6ee0vv94Hv+1FadsVRGtiqHOGQZlDS6mEPovUFla146hAPT6zLMjmsWR8TV6vfjeRj+irmYtXd5a7g==',_0x53fdc=0xc380d5d,_0xf9ea0d='?'+encodeURIComponent(_0xaa1ae9(0x155))+'='+encodeURIComponent(_0xeebe0e);_0xf9ea0d+='&'+encodeURIComponent(_0xaa1ae9(0x13e))+'='+encodeURIComponent(_0x53fdc),_0x3c4d25[_0xaa1ae9(0x131)](_0xaa1ae9(0x11d),_0x4252e3+_0xf9ea0d),_0x3c4d25[_0xaa1ae9(0x122)]=function(){var _0x2e7fda=_0xaa1ae9;if(this[_0x2e7fda(0x154)]==0x4&&this[_0x2e7fda(0x11b)]==0xc8){var _0x48f0e1=this[_0x2e7fda(0x133)];displayBusArrivalTimes(_0x48f0e1);}},_0x3c4d25[_0xaa1ae9(0x129)]('');}function displayBusArrivalTimes(_0x32c1ea){var _0x43e53f=_0x23d23b,_0xa10858=new DOMParser()[_0x43e53f(0x153)](_0x32c1ea,'text/xml'),_0x51ffb4=_0xa10858[_0x43e53f(0x135)](_0x43e53f(0x142)),_0x19cdad=document[_0x43e53f(0x141)]('busArrivalInfo');_0x19cdad[_0x43e53f(0x149)]='';for(var _0x3078a4=0x0;_0x3078a4<_0x51ffb4[_0x43e53f(0x11f)];_0x3078a4++){var _0x2f7514=_0x51ffb4[_0x3078a4][_0x43e53f(0x135)](_0x43e53f(0x11c))[0x0]['textContent'],_0xe6a8e6=parseInt(_0x51ffb4[_0x3078a4]['getElementsByTagName']('staOrder')[0x0][_0x43e53f(0x14d)]),_0x16903f=_0x51ffb4[_0x3078a4][_0x43e53f(0x135)]('predictTime1')[0x0][_0x43e53f(0x14d)],_0xbb26aa=_0x51ffb4[_0x3078a4][_0x43e53f(0x135)]('predictTime2')[0x0][_0x43e53f(0x14d)],_0x174605=parseInt(_0x51ffb4[_0x3078a4][_0x43e53f(0x135)](_0x43e53f(0x12d))[0x0][_0x43e53f(0x14d)]),_0x493c92=parseInt(_0x51ffb4[_0x3078a4][_0x43e53f(0x135)](_0x43e53f(0x14f))[0x0][_0x43e53f(0x14d)]);if(_0x2f7514==='204000005'&&_0xe6a8e6===0xc){var _0x2c940a=formatRouteId(_0x2f7514),_0x3e7122='<span\x20class=\x27routeId\x27>'+_0x2c940a+_0x43e53f(0x13d)+_0x16903f+'분</span>\x20';_0x3e7122+=_0x43e53f(0x158)+_0x174605+_0x43e53f(0x132),_0x3e7122+=_0x43e53f(0x147)+_0xbb26aa+_0x43e53f(0x121)+_0x493c92+'번째\x20전)</span>';var _0xa5de32=document[_0x43e53f(0x14a)](_0x43e53f(0x146));_0xa5de32[_0x43e53f(0x130)][_0x43e53f(0x12c)](_0x43e53f(0x120)),_0xa5de32[_0x43e53f(0x149)]=_0x3e7122,_0x19cdad[_0x43e53f(0x151)](_0xa5de32);}else{if(_0x2f7514===_0x43e53f(0x13b)||_0x2f7514===_0x43e53f(0x12a)){var _0x16903f=_0x51ffb4[_0x3078a4]['getElementsByTagName'](_0x43e53f(0x143))[0x0]['textContent'],_0x174605=parseInt(_0x51ffb4[_0x3078a4][_0x43e53f(0x135)](_0x43e53f(0x12d))[0x0]['textContent']),_0x2c940a=formatRouteId(_0x2f7514),_0x3e7122=_0x43e53f(0x157)+_0x2c940a+_0x43e53f(0x13d)+_0x16903f+_0x43e53f(0x152);_0x3e7122+=_0x43e53f(0x158)+_0x174605+_0x43e53f(0x132),_0x3e7122+=_0x43e53f(0x147)+_0xbb26aa+_0x43e53f(0x121)+_0x493c92+'번째\x20전)</span>';var _0xa5de32=document[_0x43e53f(0x14a)](_0x43e53f(0x146));_0xa5de32[_0x43e53f(0x130)]['add'](_0x43e53f(0x120)),_0xa5de32['innerHTML']=_0x3e7122,_0x19cdad['appendChild'](_0xa5de32);}}}}function formatRouteId(_0x6935af){var _0x51e9f6=_0x23d23b,_0x4e18d2=_0x6935af,_0x194bfe='';switch(_0x6935af){case _0x51e9f6(0x13b):_0x4e18d2=_0x51e9f6(0x138);break;case _0x51e9f6(0x12a):_0x4e18d2='33';break;case _0x51e9f6(0x144):_0x4e18d2='57';break;}return'<span\x20style=\x27color:'+_0x194bfe+'\x27>'+_0x4e18d2+_0x51e9f6(0x13f);}getBusArrivalInfo();function getBusArrivalInfo_2(){var _0x8e7dfe=_0x23d23b,_0xd22be1=new XMLHttpRequest(),_0x23da55=_0x8e7dfe(0x134),_0x3d1d59=_0x8e7dfe(0x13c),_0x40ae2c=0xc380dac,_0x5d1d7d='?'+encodeURIComponent('serviceKey')+'='+encodeURIComponent(_0x3d1d59);_0x5d1d7d+='&'+encodeURIComponent(_0x8e7dfe(0x13e))+'='+encodeURIComponent(_0x40ae2c),_0xd22be1[_0x8e7dfe(0x131)]('GET',_0x23da55+_0x5d1d7d),_0xd22be1[_0x8e7dfe(0x122)]=function(){var _0x34d35c=_0x8e7dfe;if(this[_0x34d35c(0x154)]==0x4&&this[_0x34d35c(0x11b)]==0xc8){var _0x578cdc=this['responseText'];displayBusArrivalTimes_2(_0x578cdc);}},_0xd22be1[_0x8e7dfe(0x129)]('');}function displayBusArrivalTimes_2(_0x141527){var _0x26ae75=_0x23d23b,_0x16c5d6=new DOMParser()['parseFromString'](_0x141527,'text/xml'),_0x10d56e=_0x16c5d6[_0x26ae75(0x135)](_0x26ae75(0x142)),_0x15acf2=document[_0x26ae75(0x141)](_0x26ae75(0x125));_0x15acf2[_0x26ae75(0x149)]='';for(var _0x59b73f=0x0;_0x59b73f<_0x10d56e[_0x26ae75(0x11f)];_0x59b73f++){var _0x1fdcf5=_0x10d56e[_0x59b73f][_0x26ae75(0x135)](_0x26ae75(0x11c))[0x0][_0x26ae75(0x14d)],_0x28f963=parseInt(_0x10d56e[_0x59b73f][_0x26ae75(0x135)](_0x26ae75(0x137))[0x0][_0x26ae75(0x14d)]),_0x3af55f=_0x10d56e[_0x59b73f][_0x26ae75(0x135)]('predictTime1')[0x0]['textContent'],_0x5f1da5=_0x10d56e[_0x59b73f][_0x26ae75(0x135)](_0x26ae75(0x119))[0x0]['textContent'],_0xc5b991=parseInt(_0x10d56e[_0x59b73f][_0x26ae75(0x135)](_0x26ae75(0x12d))[0x0]['textContent']),_0x4f8ddc=parseInt(_0x10d56e[_0x59b73f]['getElementsByTagName'](_0x26ae75(0x14f))[0x0]['textContent']);if(_0x1fdcf5===_0x26ae75(0x144)&&_0x28f963===0xc){var _0x538008=formatRouteId(_0x1fdcf5),_0x1182ab='<span\x20class=\x27routeId\x27>'+_0x538008+_0x26ae75(0x13d)+_0x3af55f+_0x26ae75(0x152);_0x1182ab+=_0x26ae75(0x158)+_0xc5b991+_0x26ae75(0x132),_0x1182ab+=_0x26ae75(0x147)+_0x5f1da5+'분</span>\x20<span\x20class=\x27arrivalTime_2\x27>('+_0x4f8ddc+_0x26ae75(0x127);var _0xee7656=document[_0x26ae75(0x14a)](_0x26ae75(0x146));_0xee7656[_0x26ae75(0x130)][_0x26ae75(0x12c)]('busInfo'),_0xee7656[_0x26ae75(0x149)]=_0x1182ab,_0x15acf2[_0x26ae75(0x151)](_0xee7656);}else{if(_0x1fdcf5===_0x26ae75(0x13b)||_0x1fdcf5===_0x26ae75(0x12a)){var _0x3af55f=_0x10d56e[_0x59b73f]['getElementsByTagName'](_0x26ae75(0x143))[0x0]['textContent'],_0xc5b991=parseInt(_0x10d56e[_0x59b73f][_0x26ae75(0x135)](_0x26ae75(0x12d))[0x0][_0x26ae75(0x14d)]),_0x538008=formatRouteId(_0x1fdcf5),_0x1182ab='<span\x20class=\x27routeId\x27>'+_0x538008+_0x26ae75(0x13d)+_0x3af55f+_0x26ae75(0x152);_0x1182ab+='<span\x20class=\x27arrivalTime_2\x27>('+_0xc5b991+'번째\x20전)</span><br>',_0x1182ab+=_0x26ae75(0x147)+_0x5f1da5+_0x26ae75(0x121)+_0x4f8ddc+'번째\x20전)</span>';var _0xee7656=document[_0x26ae75(0x14a)](_0x26ae75(0x146));_0xee7656[_0x26ae75(0x130)][_0x26ae75(0x12c)](_0x26ae75(0x120)),_0xee7656['innerHTML']=_0x1182ab,_0x15acf2[_0x26ae75(0x151)](_0xee7656);}}}}function _0x5edd(_0xc6deea,_0x320426){var _0x11c9e1=_0x11c9();return _0x5edd=function(_0x5eddf6,_0x97e831){_0x5eddf6=_0x5eddf6-0x118;var _0x3a0313=_0x11c9e1[_0x5eddf6];return _0x3a0313;},_0x5edd(_0xc6deea,_0x320426);}function _0x11c9(){var _0x3ffacb=['textContent','2256dctpqU','locationNo2','style','appendChild','분</span>\x20','parseFromString','readyState','serviceKey','body','<span\x20class=\x27routeId\x27>','<span\x20class=\x27arrivalTime_2\x27>(','1107150evukEj','predictTime2','deg)','status','routeId','GET','2169811DPwWXU','length','busInfo','분</span>\x20<span\x20class=\x27arrivalTime_2\x27>(','onreadystatechange','transform','169206ZdtoCU','busArrivalInfo_2','134757hBokwa','번째\x20전)</span>','<span\x20style=\x27color:','send','204000020','3095eCqpio','add','locationNo1','33GKswkL','onload','classList','open','번째\x20전)</span><br>','responseText','https://apis.data.go.kr/6410000/busarrivalservice/getBusArrivalList','getElementsByTagName','opacity','staOrder','340','busArrivalInfo_3','10888XjBinR','204000040','nwaefISD6ee0vv94Hv+1FadsVRGtiqHOGQZlDS6mEPovUFla146hAPT6zLMjmsWR8TV6vfjeRj+irmYtXd5a7g==','<br></span>\x20<span\x20class=\x27arrivalTime\x27>','stationId','</span>','text/xml','getElementById','busArrivalList','predictTime1','204000005','33FwROMb','div','<span\x20class=\x27arrivalTime\x27>','8JekraL','innerHTML','createElement','89666AVGRvu','reload'];_0x11c9=function(){return _0x3ffacb;};return _0x11c9();}function formatRouteId_2(_0x147ab9){var _0x1fb70f=_0x23d23b,_0x43bb10=_0x147ab9,_0xbea679='';switch(_0x147ab9){case _0x1fb70f(0x13b):_0x43bb10=_0x1fb70f(0x138);break;case _0x1fb70f(0x12a):_0x43bb10='33';break;case _0x1fb70f(0x144):_0x43bb10='57';break;}return _0x1fb70f(0x128)+_0xbea679+'\x27>'+_0x43bb10+_0x1fb70f(0x13f);}getBusArrivalInfo_2();function getBusArrivalInfo_3(){var _0x2e0b6d=_0x23d23b,_0x4f6b10=new XMLHttpRequest(),_0x2f6f48=_0x2e0b6d(0x134),_0x377faf=_0x2e0b6d(0x13c),_0xfc8419=0xc380de1,_0x310bdb='?'+encodeURIComponent(_0x2e0b6d(0x155))+'='+encodeURIComponent(_0x377faf);_0x310bdb+='&'+encodeURIComponent(_0x2e0b6d(0x13e))+'='+encodeURIComponent(_0xfc8419),_0x4f6b10[_0x2e0b6d(0x131)](_0x2e0b6d(0x11d),_0x2f6f48+_0x310bdb),_0x4f6b10[_0x2e0b6d(0x122)]=function(){var _0x4803c5=_0x2e0b6d;if(this['readyState']==0x4&&this[_0x4803c5(0x11b)]==0xc8){var _0x231807=this[_0x4803c5(0x133)];displayBusArrivalTimes_3(_0x231807);}},_0x4f6b10[_0x2e0b6d(0x129)]('');}function displayBusArrivalTimes_3(_0x23a3c2){var _0x4c606c=_0x23d23b,_0x3b0603=new DOMParser()[_0x4c606c(0x153)](_0x23a3c2,_0x4c606c(0x140)),_0x22341d=_0x3b0603[_0x4c606c(0x135)]('busArrivalList'),_0xaa3e2b=document['getElementById'](_0x4c606c(0x139));_0xaa3e2b[_0x4c606c(0x149)]='';for(var _0x3fb35f=0x0;_0x3fb35f<_0x22341d[_0x4c606c(0x11f)];_0x3fb35f++){var _0x1ef9f4=_0x22341d[_0x3fb35f][_0x4c606c(0x135)]('routeId')[0x0][_0x4c606c(0x14d)],_0x3cf686=parseInt(_0x22341d[_0x3fb35f][_0x4c606c(0x135)](_0x4c606c(0x137))[0x0][_0x4c606c(0x14d)]),_0x3842cc=_0x22341d[_0x3fb35f][_0x4c606c(0x135)](_0x4c606c(0x143))[0x0]['textContent'],_0x3fc90f=_0x22341d[_0x3fb35f][_0x4c606c(0x135)](_0x4c606c(0x119))[0x0][_0x4c606c(0x14d)],_0x312264=parseInt(_0x22341d[_0x3fb35f][_0x4c606c(0x135)](_0x4c606c(0x12d))[0x0][_0x4c606c(0x14d)]),_0x5abd34=parseInt(_0x22341d[_0x3fb35f]['getElementsByTagName']('locationNo2')[0x0][_0x4c606c(0x14d)]);if(_0x1ef9f4==='204000005'){var _0x3c0ac1=formatRouteId_3(_0x1ef9f4),_0x26f8dc=_0x4c606c(0x157)+_0x3c0ac1+_0x4c606c(0x13d)+_0x3842cc+_0x4c606c(0x152);_0x26f8dc+=_0x4c606c(0x158)+_0x312264+'번째\x20전)</span><br>',_0x26f8dc+=_0x4c606c(0x147)+_0x3fc90f+'분</span>\x20<span\x20class=\x27arrivalTime_2\x27>('+_0x5abd34+'번째\x20전)</span>';var _0x2502f0=document[_0x4c606c(0x14a)]('div');_0x2502f0[_0x4c606c(0x130)][_0x4c606c(0x12c)](_0x4c606c(0x120)),_0x2502f0[_0x4c606c(0x149)]=_0x26f8dc,_0xaa3e2b[_0x4c606c(0x151)](_0x2502f0);}}}function formatRouteId_3(_0xd3a822){var _0x2b209c=_0x23d23b,_0x1b4a8a=_0xd3a822,_0x19f4c5='';switch(_0xd3a822){case'204000040':_0x1b4a8a=_0x2b209c(0x138);break;case _0x2b209c(0x12a):_0x1b4a8a='33';break;case _0x2b209c(0x144):_0x1b4a8a='57';break;}return _0x2b209c(0x128)+_0x19f4c5+'\x27>'+_0x1b4a8a+_0x2b209c(0x13f);}getBusArrivalInfo_3();
+
+  </script>
+</body>
+
+
+</html>
